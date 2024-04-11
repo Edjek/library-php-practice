@@ -30,6 +30,14 @@ h1 {
     text-align: center;
 }
 
+header {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+
+main {
+    padding: 3rem;
+}
+
 .btn {
     display: inline-block;
     padding: 10px 30px;

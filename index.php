@@ -20,23 +20,30 @@ $books = $stmt->fetchAll();
 </head>
 
 <body>
-    <div class="container">
+    <header>
         <h1>Nos livres disponibles</h1>
-        <a href="view/admin/admin.php" class="btn">Admin</a>
-        <div class="book-wrapper">
-            <?php
-            foreach($books as $row) {
-            ?>
-            <div class="card">
-                <h2><?= $row['title']; ?></h2>
-                <p><?= $row['summary']; ?></p>
-                <a href="view/front/detail.php?id=<?= $row['book_id']  ?>" class="btn">en savoir plus</a>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <a href="view/admin/admin.php" class="btn">Admin</a>
+                <div class="book-wrapper">
+                    <?php
+                    foreach ($books as $row) {
+                    ?>
+                        <div class="card">
+                            <h3><?= $row['title']; ?></h3>
+                            <p><?= $row['summary']; ?></p>
+                            <a href="view/front/detail.php?id=<?= $row['book_id']  ?>" class="btn">en savoir plus</a>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                </div>
             </div>
-            <?php
-            }
-            ?>
-        </div>
-    </div>
+        </section>
+    </main>
+    <footer></footer>
 </body>
 
 </html>

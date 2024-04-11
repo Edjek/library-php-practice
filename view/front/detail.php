@@ -13,18 +13,26 @@ $book = $stmt->fetch();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LIBRAIRIE - <?= strtoupper($book['title'])?></title>
     <link rel="stylesheet" href="../../public/css/style.css">
 </head>
 <body>
-    <div class="container">
-    <?= 'bonjour ' . $_SESSION['user']; ?>
-        <h1> Découvrez cet ouvrage</h1>
-        <div class="book-detail">
-            <h2><?= $book['title'] ?></h2>
-            <p><?= $book['summary'] ?></p>
-            <p>Date de parution <?= $book['date'] ?></p>
-        </div>
-    </div>
+    <header>
+        <?= 'bonjour ' . $_SESSION['user']; ?>
+        <h1>Nos livres disponibles</h1>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <h2> Découvrez cet ouvrage</h2>
+                <div class="book-detail">
+                    <h2><?= $book['title'] ?></h2>
+                    <p><?= $book['summary'] ?></p>
+                    <p>Date de parution <?= $book['date'] ?></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
 </body>
 </html>

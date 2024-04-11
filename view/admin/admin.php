@@ -18,10 +18,18 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <body>
-    <div class="container">
-        <h1>Admin</h1>
-        <a href="add-book.php" class="btn">Ajouter un nouveau livre</a>
-    </div>
+    <header>
+        <h1>Nos livres disponibles</h1>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <h2>Admin</h2>
+                <a href="add-book.php" class="btn">Ajouter un nouveau livre</a>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
 </body>
 
 </html>
